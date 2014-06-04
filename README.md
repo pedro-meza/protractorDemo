@@ -14,3 +14,7 @@ grunt serve
 
 Tests can be run using the created protractor configuration in Grunt:
 grunt protractor
+
+Test accounts to use are:
+admin/password (admin account)
+fanboy/password
