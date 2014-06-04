@@ -1,0 +1,21 @@
+<div>
+    <form>
+        <div class="row" style="color: #FFCC33">
+            <div class="col-md-3">Event Date</div>
+            <div class="col-md-7">Title</div>
+            <div class="col-md-2">Buy Ticket</div>
+        </div>
+        <div class="row" ng-repeat="event in events">
+            <div class="col-md-3" ng-show="!isAdmin" style="color: white">{{event.eventDate | date:'MM/dd/yyyy'}}</div>
+            <div class="col-md-3" ng-show="isAdmin"><input value="{{event.eventDate | date:'MM/dd/yyyy'}}"></div>
+            <div class="col-md-7" ng-show="!isAdmin" style="color:white">{{event.title}}</div>
+            <div class="col-md-7" ng-show="isAdmin"><input value="{{event.title}}" style="width: 100%"></div>
+            <div class="col-md-2" style="color: white; text-align:center"><span class="glyphicon glyphicon-shopping-cart"></span></div>
+        </div>
+        <BR/>
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2"><div class="btn btn-primary">Submit</div></div>
+        </div>
+    </form>
+</div>
